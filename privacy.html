@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Tokyo Skate Radar</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  :root {
+    --black:#050505; --dark:#0f0f0f; --card:#141414;
+    --border:#1e1e1e; --orange:#ff6b00; --text:#f5f5f7;
+    --muted:#8e8e93; --dim:#3a3a3c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--black);color:var(--text);
+    font-family:-apple-system,'SF Pro Display','Hiragino Sans',sans-serif;
+    line-height:1.7;}
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 32px;
+    background:rgba(5,5,5,0.92);
+    border-bottom:1px solid rgba(255,107,0,0.15);
+    position:sticky;top:0;z-index:100;
+  }
+  .nav-title{
+    font-family:'Space Mono',monospace;font-size:15px;
+    font-weight:700;color:var(--orange);letter-spacing:-0.02em;
+    text-decoration:none;
+  }
+  .lang-toggle{display:flex;gap:2px;background:var(--border);border-radius:6px;padding:2px;}
+  .lang-btn{
+    padding:4px 10px;font-family:'Space Mono',monospace;
+    font-size:10px;font-weight:700;letter-spacing:0.05em;
+    border:none;border-radius:4px;cursor:pointer;
+    background:transparent;color:var(--muted);transition:all 0.15s;
+  }
+  .lang-btn.active{background:var(--orange);color:#000;}
+  .container{max-width:720px;margin:0 auto;padding:60px 24px 100px;}
+  .page-label{
+    font-family:'Space Mono',monospace;font-size:11px;
+    color:var(--orange);letter-spacing:0.2em;text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  h1{font-size:clamp(28px,5vw,42px);font-weight:800;
+    letter-spacing:-0.03em;margin-bottom:8px;}
+  .updated{
+    font-family:'Space Mono',monospace;font-size:11px;
+    color:var(--muted);margin-bottom:48px;letter-spacing:0.05em;
+  }
+  .notice{
+    background:var(--card);border:1px solid rgba(255,107,0,0.2);
+    border-left:3px solid var(--orange);
+    padding:16px 20px;margin-bottom:40px;
+    font-size:13px;color:var(--muted);
+    font-family:'Space Mono',monospace;
+  }
+  h2{
+    font-size:16px;font-weight:700;letter-spacing:-0.01em;
+    margin:36px 0 12px;padding-left:12px;
+    border-left:2px solid var(--orange);color:var(--orange);
+    font-family:'Space Mono',monospace;
+  }
+  p{font-size:14px;color:#c0c0c5;margin-bottom:10px;}
+  ul{margin:8px 0 12px 20px;}
+  ul li{font-size:14px;color:#c0c0c5;margin-bottom:6px;}
+  a{color:var(--orange);}
+  footer{
+    border-top:1px solid var(--border);padding:32px 24px;
+    text-align:center;
+    font-family:'Space Mono',monospace;font-size:11px;color:var(--dim);
+  }
+  [data-lang]{display:none;}
+  .lang-ja [data-lang="ja"]{display:block;}
+  .lang-en [data-lang="en"]{display:block;}
+</style>
+</head>
+<body class="lang-ja">
+
+<nav>
+  <a href="index.html" class="nav-title">TOKYO SKATE RADAR</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('ja')">JP</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- JAPANESE -->
+<div data-lang="ja">
+<div class="container">
+  <p class="page-label">Legal</p>
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日：2025年（正式ローンチ時に更新予定）</p>
+  <div class="notice">⚠ これは試案です。正式ローンチ前に法律の専門家によるレビューを推奨します。</div>
+
+  <h2>1. はじめに</h2>
+  <p>Tokyo Skate Radar（以下「本アプリ」）は、東京都内のスケートパーク情報を提供するアプリケーションです。本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明します。</p>
+
+  <h2>2. 収集する情報</h2>
+  <ul>
+    <li><strong>位置情報：</strong>現在地からの距離・経路計算のみに使用。デバイス内で処理し、外部サーバーには送信しません。利用許可はユーザーが選択でき、拒否しても基本機能は利用可能です。</li>
+    <li><strong>混雑報告データ：</strong>ユーザーが任意で投稿する報告はデバイスのローカルストレージにのみ保存されます。</li>
+    <li><strong>お気に入り・設定データ：</strong>デバイスのローカルストレージにのみ保存されます。</li>
+  </ul>
+
+  <h2>3. 収集しない情報</h2>
+  <ul>
+    <li>氏名・メールアドレス・電話番号等の個人識別情報</li>
+    <li>アカウント情報（本アプリはアカウント登録不要です）</li>
+    <li>決済情報・クレジットカード情報</li>
+    <li>デバイス識別子・広告ID</li>
+    <li>閲覧履歴・行動ログ</li>
+  </ul>
+
+  <h2>4. 第三者サービス</h2>
+  <ul>
+    <li><strong>Open-Meteo API：</strong>天気情報の取得に使用。リクエスト時にIPアドレスが送信される場合があります。</li>
+    <li><strong>Google Maps：</strong>地図リンク・経路案内のリンクに使用。タップした場合はGoogleの利用規約が適用されます。</li>
+    <li><strong>Instagram：</strong>各パークの公式アカウントへのリンクに使用。タップした場合はInstagramの利用規約が適用されます。</li>
+  </ul>
+
+  <h2>5. 情報の第三者提供</h2>
+  <p>本アプリは、ユーザーの個人情報を第三者に販売・提供・共有しません。</p>
+
+  <h2>6. 広告について</h2>
+  <p>現時点では本アプリに広告は掲載されていません。将来的に導入する場合は、本ポリシーを更新し事前にお知らせします。</p>
+
+  <h2>7. 未成年者について</h2>
+  <p>本アプリは13歳未満のユーザーを対象としていません。</p>
+
+  <h2>8. プライバシーポリシーの変更</h2>
+  <p>本ポリシーは必要に応じて更新されます。重要な変更はアプリ内でお知らせします。</p>
+
+  <h2>9. お問い合わせ</h2>
+  <p>Email：<a href="mailto:support@skateradar.app">support@skateradar.app</a></p>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en">
+<div class="container">
+  <p class="page-label">Legal</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2025 (to be updated at official launch)</p>
+  <div class="notice">⚠ This is a draft. Legal review is recommended before official launch.</div>
+
+  <h2>1. Introduction</h2>
+  <p>Tokyo Skate Radar provides skatepark information for Tokyo, Japan. This Privacy Policy explains how the app handles user information.</p>
+
+  <h2>2. Information We Collect</h2>
+  <ul>
+    <li><strong>Location Data:</strong> Used solely to calculate distance and directions. Processed on-device only, never transmitted externally. Location access is optional.</li>
+    <li><strong>Crowd Reports:</strong> User-submitted reports are stored only in device local storage.</li>
+    <li><strong>Favorites & Settings:</strong> Stored only in device local storage.</li>
+  </ul>
+
+  <h2>3. Information We Do Not Collect</h2>
+  <ul>
+    <li>Personal identifiers (name, email, phone)</li>
+    <li>Account credentials (no registration required)</li>
+    <li>Payment or financial information</li>
+    <li>Device identifiers or advertising IDs</li>
+    <li>Browsing history or behavioral analytics</li>
+  </ul>
+
+  <h2>4. Third-Party Services</h2>
+  <ul>
+    <li><strong>Open-Meteo API:</strong> Used for weather data. Your device's IP address may be included in API requests.</li>
+    <li><strong>Google Maps:</strong> Used for map links and directions. Google's Terms of Service apply when accessed.</li>
+    <li><strong>Instagram:</strong> Used for links to park official accounts. Instagram's Terms of Service apply when accessed.</li>
+  </ul>
+
+  <h2>5. Data Sharing</h2>
+  <p>We do not sell, share, or disclose any user information to third parties.</p>
+
+  <h2>6. Advertising</h2>
+  <p>The app currently contains no advertising. This policy will be updated if advertising is introduced.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>The app is not directed at children under the age of 13.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. Significant changes will be communicated via app updates.</p>
+
+  <h2>9. Contact</h2>
+  <p>Email: <a href="mailto:support@skateradar.app">support@skateradar.app</a></p>
+</div>
+</div>
+
+<footer>© 2025 Tokyo Skate Radar · <a href="index.html">Home</a> · <a href="mailto:support@skateradar.app">support@skateradar.app</a></footer>
+
+<script>
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.getAttribute('onclick') === "setLang('" + lang + "')") btn.classList.add('active');
+  });
+}
+setLang('ja');
+</script>
+</body>
+</html>

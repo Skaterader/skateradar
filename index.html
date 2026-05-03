@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tokyo Skate Radar — Tokyo's Skatepark Guide</title>
+<meta name="description" content="Tokyo's most precise skatepark guide. Real-time weather, crowd levels, and local rules for every park. Available on iOS.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CjxkZWZzPgogIDxmaWx0ZXIgaWQ9ImcxIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxmaWx0ZXIgaWQ9ImcyIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxjbGlwUGF0aCBpZD0icm91bmRlZCI+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIvPgogIDwvY2xpcFBhdGg+CjwvZGVmcz4KCjwhLS0gQmFja2dyb3VuZCAtLT4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IiMwYTBhMGEiLz4KCjwhLS0gUmFkYXIgcmluZ3MgLS0+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMTAiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjE2IiBjbGlwLXBhdGg9InVybCgjcm91bmRlZCkiLz4KPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yMyIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjAiICBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzIiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgoKPCEtLSBSYWRhciBzd2VlcCAtLT4KPHBhdGggZD0iTTI1NiwyNTYgTDI1Niw1MCBBMjEwLDIxMCAwIDAsMSA0NDAsMTcwIFoiIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii4wNyIgZmlsdGVyPSJ1cmwoI2cxKSIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSIyNTYiIHkyPSI1MCIgIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSI0NDAiIHkyPSIxNzAiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+Cgo8IS0tIENyb3NzaGFpciAoc3VidGxlKSAtLT4KPGxpbmUgeDE9IjUwIiAgeTE9IjI1NiIgeDI9IjQ2MiIgeTI9IjI1NiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KPGxpbmUgeDE9IjI1NiIgeTE9IjUwIiAgeDI9IjI1NiIgeTI9IjQ2MiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KCjwhLS0gU2thdGVib2FyZCAtLT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2LDI1Nikgcm90YXRlKC0yMCkiPgogIDwhLS0gZGVjayBzaGFkb3cgLS0+CiAgPHJlY3QgeD0iLTEwNSIgeT0iLTI4IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjU2IiByeD0iMjgiIGZpbGw9IiMwYTAwMDAiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBkZWNrIGZhY2UgLS0+CiAgPHJlY3QgeD0iLTEwMiIgeT0iLTI1IiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9IiNjYzQ0MDAiLz4KICA8cmVjdCB4PSItMTAyIiB5PSItMjUiIHdpZHRoPSIyMDQiIGhlaWdodD0iNTAiIHJ4PSIyNSIgZmlsbD0iI2ZmNzcyMiIgb3BhY2l0eT0iLjUiLz4KICA8IS0tIG5vc2UvdGFpbCBnbG93IC0tPgogIDxlbGxpcHNlIGN4PSItODgiIGN5PSIwIiByeD0iMTQiIHJ5PSIyMiIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjMyIi8+CiAgPGVsbGlwc2UgY3g9Ijg4IiAgY3k9IjAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjZmY5OTQ0IiBvcGFjaXR5PSIuMzIiLz4KICA8IS0tIGRlY2sgcmltIC0tPgogIDxyZWN0IHg9Ii0xMDIiIHk9Ii0yNSIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI1MCIgcng9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjg4MDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNCIvPgoKICA8IS0tIFRydWNrcyBmcm9udCAtLT4KICA8cmVjdCB4PSI1MiIgIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9IjU3IiAgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CiAgPCEtLSBUcnVja3MgYmFjayAtLT4KICA8cmVjdCB4PSItOTAiIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9Ii04NSIgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iLTIyIiByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KCiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSIxNyIgZmlsbD0iIzBkMGQwZCIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjMiIGZpbHRlcj0idXJsKCNnMikiLz4KICA8Y2lyY2xlIGN4PSI2NCIgIGN5PSIyMiIgIHI9IjkiICBmaWxsPSIjZmY3NzAwIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSI0IiAgZmlsbD0iI2ZmYWE0NCIvPgoKICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjE3IiBmaWxsPSIjMGQwZDBkIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsdGVyPSJ1cmwoI2cyKSIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9Ii0yMiIgcj0iOSIgIGZpbGw9IiNmZjc3MDAiLz4KICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjQiICBmaWxsPSIjZmZhYTQ0Ii8+CgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iLTcyIiBjeT0iMjIiICByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KPC9nPgoKPCEtLSBDZW50ZXIgZG90IC0tPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiNmZjZiMDAiIGZpbHRlcj0idXJsKCNnMSkiLz4KCjwhLS0gQmxpcCBkb3RzIC0tPgo8Y2lyY2xlIGN4PSIzNjIiIGN5PSIxMzAiIHI9IjciIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii45IiBmaWx0ZXI9InVybCgjZzIpIi8+CjxjaXJjbGUgY3g9IjMxMCIgY3k9IjE3NSIgcj0iNSIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjYiIGZpbHRlcj0idXJsKCNnMikiLz4KCjwhLS0gQm90dG9tIHRleHQgLS0+Cjx0ZXh0IHg9IjI1NiIgeT0iNDQ1IgogIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2UiCiAgZm9udC1zaXplPSIyOCIKICBmb250LXdlaWdodD0iOTAwIgogIGxldHRlci1zcGFjaW5nPSI2IgogIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgZmlsbD0iI2ZmNmIwMCIKICBvcGFjaXR5PSIxIj5TS0FURSBSQURBUjwvdGV4dD4KPC9zdmc+Cg==">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --black:  #050505;
+    --dark:   #0f0f0f;
+    --card:   #141414;
+    --border: #1e1e1e;
+    --orange: #ff6b00;
+    --orange2:#ff8c00;
+    --text:   #f5f5f7;
+    --muted:  #8e8e93;
+    --dim:    #3a3a3c;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--black); color:var(--text);
+    font-family:-apple-system,'SF Pro Display','Hiragino Sans',sans-serif;
+    overflow-x:hidden;
+  }
+
+  /* ── RADAR BG ── */
+  .radar-bg {
+    position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+  }
+  .radar-bg svg {
+    position:absolute; top:50%; left:50%;
+    width:140vmax; height:140vmax;
+    opacity:0.07;
+    transform-origin:center center;
+    animation:radar-spin 60s linear infinite;
+    will-change:transform;
+  }
+  @keyframes radar-spin {
+    from { transform:translate(-50%,-50%) rotate(0deg); }
+    to   { transform:translate(-50%,-50%) rotate(360deg); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    background:rgba(5,5,5,0.88);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,107,0,0.15);
+  }
+  .nav-brand {
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .nav-title {
+    font-family:'Space Mono',monospace;
+    font-size:15px; font-weight:700;
+    color:var(--orange);
+    letter-spacing:-0.02em;
+    line-height:1;
+  }
+  .nav-sub {
+    font-family:'Space Mono',monospace;
+    font-size:9px; color:var(--muted);
+    letter-spacing:0.15em; text-transform:uppercase;
+  }
+  .nav-right { display:flex; align-items:center; gap:24px; }
+  .nav-links { display:flex; gap:24px; list-style:none; }
+  .nav-links a {
+    color:var(--muted); text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+    transition:color 0.2s;
+  }
+  .nav-links a:hover { color:var(--orange); }
+
+  /* LANG TOGGLE */
+  .lang-toggle {
+    display:flex; gap:2px;
+    background:var(--border); border-radius:6px; padding:2px;
+  }
+  .lang-btn {
+    padding:4px 10px;
+    font-family:'Space Mono',monospace;
+    font-size:10px; font-weight:700;
+    letter-spacing:0.05em;
+    border:none; border-radius:4px; cursor:pointer;
+    background:transparent; color:var(--muted);
+    transition:all 0.15s;
+  }
+  .lang-btn.active {
+    background:var(--orange); color:#000;
+  }
+
+  /* ── SECTIONS ── */
+  section { position:relative; z-index:1; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height:100vh;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center; padding:120px 24px 80px;
+  }
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:6px 14px;
+    border:1px solid rgba(255,107,0,0.3); border-radius:20px;
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--orange); letter-spacing:0.1em; text-transform:uppercase;
+    margin-bottom:40px; background:rgba(255,107,0,0.06);
+  }
+  .hero-badge::before {
+    content:''; width:6px; height:6px; border-radius:50%;
+    background:var(--orange); box-shadow:0 0 8px var(--orange);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+  /* Hero title: Space Mono, unified font */
+  .hero-title {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(28px,6vw,64px);
+    font-weight:700;
+    color:var(--orange);
+    letter-spacing:-0.03em;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .hero-title-sub {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(11px,2vw,16px);
+    font-weight:400;
+    color:var(--muted);
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    margin-bottom:40px;
+  }
+
+  .hero-icon {
+    width:min(120px,22vw);
+    margin-bottom:24px;
+    filter:drop-shadow(0 0 40px rgba(255,107,0,0.3));
+  }
+
+  .hero-sub {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(11px,1.8vw,13px);
+    color:var(--muted); letter-spacing:0.08em;
+    text-transform:uppercase; margin-bottom:48px; line-height:2;
+  }
+  .hero-sub span { color:var(--orange); }
+
+  .hero-actions { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+
+  .btn-primary {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 28px; background:var(--orange); color:#000;
+    font-weight:800; font-size:14px; letter-spacing:-0.01em;
+    border-radius:10px; text-decoration:none;
+    transition:all 0.2s; border:none; cursor:pointer;
+    font-family:'Space Mono',monospace;
+  }
+  .btn-primary:hover {
+    background:var(--orange2); transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(255,107,0,0.4);
+  }
+  .btn-secondary {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 28px; background:transparent; color:var(--text);
+    font-size:13px; letter-spacing:0.02em; border-radius:10px;
+    text-decoration:none; border:1px solid var(--dim);
+    transition:all 0.2s; cursor:pointer;
+    font-family:'Space Mono',monospace;
+  }
+  .btn-secondary:hover { border-color:var(--orange); color:var(--orange); transform:translateY(-2px); }
+
+  .scroll-hint {
+    position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    font-family:'Space Mono',monospace; font-size:10px; color:var(--dim);
+    letter-spacing:0.15em; text-transform:uppercase;
+    animation:float 2s ease-in-out infinite;
+  }
+  .scroll-hint::after {
+    content:''; width:1px; height:40px;
+    background:linear-gradient(to bottom,var(--dim),transparent);
+  }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(6px);} }
+
+  /* ── STATS ── */
+  .stats {
+    padding:0 24px 80px; max-width:900px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:2px; text-align:center;
+  }
+  .stat-box {
+    padding:40px 20px; border:1px solid var(--border); background:var(--card);
+    transition:background 0.2s;
+  }
+  .stat-box:hover { background:#1a1a1a; }
+  .stat-num {
+    font-size:clamp(36px,6vw,56px); font-weight:900;
+    letter-spacing:-0.04em; color:var(--orange);
+    line-height:1; margin-bottom:8px;
+    font-family:'Space Mono',monospace;
+  }
+  .stat-label {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:0.1em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display:flex; align-items:center; gap:16px;
+    padding:0 24px; max-width:1100px; margin:0 auto 0; opacity:0.35;
+  }
+  .divider::before,.divider::after {
+    content:''; flex:1; height:1px; background:var(--orange);
+  }
+  .divider span {
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--orange); letter-spacing:0.2em;
+    text-transform:uppercase; white-space:nowrap;
+  }
+
+  /* ── FEATURES ── */
+  .features { padding:80px 24px; max-width:1100px; margin:0 auto; }
+  .section-label {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--orange); letter-spacing:0.2em;
+    text-transform:uppercase; margin-bottom:16px;
+  }
+  .section-title {
+    font-size:clamp(28px,5vw,48px); font-weight:800;
+    letter-spacing:-0.03em; line-height:1.1; margin-bottom:60px;
+  }
+  .section-title em { font-style:normal; color:var(--orange); }
+  .features-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2px;
+  }
+  .feature-card {
+    background:var(--card); padding:40px 36px;
+    border:1px solid var(--border); transition:all 0.3s;
+    position:relative; overflow:hidden;
+  }
+  .feature-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:var(--orange); transform:scaleX(0); transform-origin:left;
+    transition:transform 0.3s;
+  }
+  .feature-card:hover::before { transform:scaleX(1); }
+  .feature-card:hover { background:#181818; }
+  .feature-icon { font-size:32px; margin-bottom:20px; display:block; }
+  .feature-name { font-size:18px; font-weight:700; letter-spacing:-0.02em; margin-bottom:10px; }
+  .feature-desc { font-size:14px; color:var(--muted); line-height:1.7; }
+  .feature-tag {
+    display:inline-block; margin-top:16px;
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--orange); letter-spacing:0.1em; text-transform:uppercase;
+  }
+
+  /* ── PARKS ── */
+  .parks { padding:80px 24px; background:var(--dark); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .parks-inner { max-width:1100px; margin:0 auto; }
+  .parks-list {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:1px; margin-top:40px; border:1px solid var(--border);
+  }
+  .park-item { padding:20px 24px; background:var(--card); transition:background 0.2s; }
+  .park-item:hover { background:#1a1a1a; }
+  .park-name { font-size:13px; font-weight:700; margin-bottom:4px; }
+  .park-area {
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .park-tags { display:flex; gap:4px; margin-top:8px; flex-wrap:wrap; }
+  .park-tag {
+    font-size:9px; padding:2px 6px; border-radius:2px;
+    font-family:'Space Mono',monospace; text-transform:uppercase;
+  }
+  .tag-free { background:rgba(48,209,88,0.15); color:#30d158; }
+  .tag-indoor { background:rgba(100,150,255,0.15); color:#6496ff; }
+  .tag-new { background:rgba(255,107,0,0.15); color:var(--orange); }
+
+  /* ── CTA ── */
+  .cta { padding:120px 24px; text-align:center; position:relative; overflow:hidden; }
+  .cta::before {
+    content:''; position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:600px; height:600px;
+    background:radial-gradient(circle,rgba(255,107,0,0.08) 0%,transparent 70%);
+    pointer-events:none;
+  }
+  .cta h2 {
+    font-size:clamp(32px,6vw,64px); font-weight:900;
+    letter-spacing:-0.04em; line-height:1.05;
+    margin-bottom:24px; position:relative;
+  }
+  .cta h2 em { font-style:normal; color:var(--orange); }
+  .cta p {
+    font-family:'Space Mono',monospace; font-size:13px;
+    color:var(--muted); letter-spacing:0.05em;
+    margin-bottom:48px; position:relative;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top:1px solid var(--border); padding:48px 32px;
+    display:flex; flex-direction:column; align-items:center; gap:24px; text-align:center;
+  }
+  .footer-title {
+    font-family:'Space Mono',monospace; font-size:18px; font-weight:700;
+    color:var(--orange); letter-spacing:-0.02em;
+  }
+  .footer-links { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; }
+  .footer-links a {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--muted); text-decoration:none;
+    letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s;
+  }
+  .footer-links a:hover { color:var(--orange); }
+  .footer-copy {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--dim); letter-spacing:0.05em;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width:640px) {
+    nav { padding:14px 20px; }
+    .nav-links { display:none; }
+    .hero-title { font-size:clamp(24px,8vw,40px); }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity:0; transform:translateY(24px);
+    animation:fadeIn 0.8s ease forwards;
+  }
+  .fade-in:nth-child(1){animation-delay:0.1s;}
+  .fade-in:nth-child(2){animation-delay:0.2s;}
+  .fade-in:nth-child(3){animation-delay:0.3s;}
+  .fade-in:nth-child(4){animation-delay:0.4s;}
+  @keyframes fadeIn { to{opacity:1;transform:translateY(0);} }
+
+  /* ── I18N ── */
+  [data-lang] { display:none; }
+  .lang-ja [data-lang="ja"] { display:block; }
+  .lang-en [data-lang="en"] { display:block; }
+  .lang-ja [data-lang="ja"].inline { display:inline; }
+  .lang-en [data-lang="en"].inline { display:inline; }
+  /* default ja */
+  body { display:block; }
+</style>
+</head>
+<body class="lang-ja">
+
+<!-- Radar BG -->
+<div class="radar-bg">
+  <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="400" r="80"  fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="160" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="240" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="320" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="380" fill="none" stroke="#ff6b00" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#ff6b00" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="800" stroke="#ff6b00" stroke-width="0.5"/>
+    <path d="M400,400 L400,80 A320,320 0 0,1 626,174 Z" fill="#ff6b00" opacity="0.4"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-title">TOKYO SKATE RADAR</div>
+    <div class="nav-sub">Skatepark Guide · Tokyo</div>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#features" data-i18n-ja="機能" data-i18n-en="Features">機能</a></li>
+      <li><a href="#parks" data-i18n-ja="パーク" data-i18n-en="Parks">パーク</a></li>
+      <li><a href="#download" data-i18n-ja="ダウンロード" data-i18n-en="Download">Download</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ja')">JP</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge fade-in">
+    🛹 <span data-lang="ja">開発中 · iOS App</span><span data-lang="en">Now in development · iOS App</span>
+  </div>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CjxkZWZzPgogIDxmaWx0ZXIgaWQ9ImcxIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxmaWx0ZXIgaWQ9ImcyIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxjbGlwUGF0aCBpZD0icm91bmRlZCI+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIvPgogIDwvY2xpcFBhdGg+CjwvZGVmcz4KCjwhLS0gQmFja2dyb3VuZCAtLT4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IiMwYTBhMGEiLz4KCjwhLS0gUmFkYXIgcmluZ3MgLS0+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMTAiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjE2IiBjbGlwLXBhdGg9InVybCgjcm91bmRlZCkiLz4KPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yMyIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjAiICBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzIiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgoKPCEtLSBSYWRhciBzd2VlcCAtLT4KPHBhdGggZD0iTTI1NiwyNTYgTDI1Niw1MCBBMjEwLDIxMCAwIDAsMSA0NDAsMTcwIFoiIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii4wNyIgZmlsdGVyPSJ1cmwoI2cxKSIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSIyNTYiIHkyPSI1MCIgIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSI0NDAiIHkyPSIxNzAiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+Cgo8IS0tIENyb3NzaGFpciAoc3VidGxlKSAtLT4KPGxpbmUgeDE9IjUwIiAgeTE9IjI1NiIgeDI9IjQ2MiIgeTI9IjI1NiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KPGxpbmUgeDE9IjI1NiIgeTE9IjUwIiAgeDI9IjI1NiIgeTI9IjQ2MiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KCjwhLS0gU2thdGVib2FyZCAtLT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2LDI1Nikgcm90YXRlKC0yMCkiPgogIDwhLS0gZGVjayBzaGFkb3cgLS0+CiAgPHJlY3QgeD0iLTEwNSIgeT0iLTI4IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjU2IiByeD0iMjgiIGZpbGw9IiMwYTAwMDAiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBkZWNrIGZhY2UgLS0+CiAgPHJlY3QgeD0iLTEwMiIgeT0iLTI1IiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9IiNjYzQ0MDAiLz4KICA8cmVjdCB4PSItMTAyIiB5PSItMjUiIHdpZHRoPSIyMDQiIGhlaWdodD0iNTAiIHJ4PSIyNSIgZmlsbD0iI2ZmNzcyMiIgb3BhY2l0eT0iLjUiLz4KICA8IS0tIG5vc2UvdGFpbCBnbG93IC0tPgogIDxlbGxpcHNlIGN4PSItODgiIGN5PSIwIiByeD0iMTQiIHJ5PSIyMiIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjMyIi8+CiAgPGVsbGlwc2UgY3g9Ijg4IiAgY3k9IjAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjZmY5OTQ0IiBvcGFjaXR5PSIuMzIiLz4KICA8IS0tIGRlY2sgcmltIC0tPgogIDxyZWN0IHg9Ii0xMDIiIHk9Ii0yNSIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI1MCIgcng9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjg4MDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNCIvPgoKICA8IS0tIFRydWNrcyBmcm9udCAtLT4KICA8cmVjdCB4PSI1MiIgIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9IjU3IiAgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CiAgPCEtLSBUcnVja3MgYmFjayAtLT4KICA8cmVjdCB4PSItOTAiIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9Ii04NSIgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iLTIyIiByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KCiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSIxNyIgZmlsbD0iIzBkMGQwZCIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjMiIGZpbHRlcj0idXJsKCNnMikiLz4KICA8Y2lyY2xlIGN4PSI2NCIgIGN5PSIyMiIgIHI9IjkiICBmaWxsPSIjZmY3NzAwIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSI0IiAgZmlsbD0iI2ZmYWE0NCIvPgoKICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjE3IiBmaWxsPSIjMGQwZDBkIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsdGVyPSJ1cmwoI2cyKSIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9Ii0yMiIgcj0iOSIgIGZpbGw9IiNmZjc3MDAiLz4KICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjQiICBmaWxsPSIjZmZhYTQ0Ii8+CgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iLTcyIiBjeT0iMjIiICByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KPC9nPgoKPCEtLSBDZW50ZXIgZG90IC0tPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiNmZjZiMDAiIGZpbHRlcj0idXJsKCNnMSkiLz4KCjwhLS0gQmxpcCBkb3RzIC0tPgo8Y2lyY2xlIGN4PSIzNjIiIGN5PSIxMzAiIHI9IjciIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii45IiBmaWx0ZXI9InVybCgjZzIpIi8+CjxjaXJjbGUgY3g9IjMxMCIgY3k9IjE3NSIgcj0iNSIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjYiIGZpbHRlcj0idXJsKCNnMikiLz4KCjwhLS0gQm90dG9tIHRleHQgLS0+Cjx0ZXh0IHg9IjI1NiIgeT0iNDQ1IgogIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2UiCiAgZm9udC1zaXplPSIyOCIKICBmb250LXdlaWdodD0iOTAwIgogIGxldHRlci1zcGFjaW5nPSI2IgogIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgZmlsbD0iI2ZmNmIwMCIKICBvcGFjaXR5PSIxIj5TS0FURSBSQURBUjwvdGV4dD4KPC9zdmc+Cg==" alt="Tokyo Skate Radar" class="hero-icon fade-in">
+  <h1 class="hero-title fade-in">TOKYO SKATE RADAR</h1>
+  <p class="hero-title-sub fade-in"><span data-lang="ja">Skatepark Guide · 東京</span><span data-lang="en">Skatepark Guide · Tokyo</span></p>
+  <p class="hero-sub fade-in">
+    <span data-lang="ja">東京で最も正確なスケートパーク情報<br><span>天気 · 混雑 · 営業時間 · ローカルルール</span><br>訪日スケーターにも完全英語対応</span>
+    <span data-lang="en">Tokyo's most precise skatepark guide<br><span>Weather · Crowd · Hours · Local Rules</span><br>Fully bilingual for visiting skaters</span>
+  </p>
+  <div class="hero-actions fade-in">
+    <a href="#download" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <span data-lang="ja">iOS アプリ</span><span data-lang="en">Get on iOS</span>
+    </a>
+    <a href="#features" class="btn-secondary">
+      <span data-lang="ja">詳しく見る →</span><span data-lang="en">Learn More →</span>
+    </a>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-box">
+    <div class="stat-num">17</div>
+    <div class="stat-label" data-i18n-ja="都内パーク数" data-i18n-en="Parks in Tokyo">都内パーク数</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">EN/JP</div>
+    <div class="stat-label" data-i18n-ja="完全2か国語" data-i18n-en="Bilingual">完全2か国語</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">8h</div>
+    <div class="stat-label" data-i18n-ja="天気予報" data-i18n-en="Weather Forecast">天気予報</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">0¥</div>
+    <div class="stat-label" data-i18n-ja="無料で使える" data-i18n-en="Free to Use">無料で使える</div>
+  </div>
+</div>
+
+<div class="divider"><span>Features</span></div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <p class="section-label">What it does</p>
+  <h2 class="section-title">
+    <span data-lang="ja">滑る前に必要な情報が<br><em>全部ここにある</em></span>
+    <span data-lang="en">Everything you need<br>before you <em>drop in</em></span>
+  </h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🌦</span>
+      <div class="feature-name"><span data-lang="ja">リアルタイム天気</span><span data-lang="en">Real-Time Weather</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">各パークの現在の天気と8時間予報。雨天時は屋外パークの混雑を自動的に「空き」として補正します。</span>
+        <span data-lang="en">Live conditions + 8-hour forecast per park. Rain suppression logic auto-marks outdoor parks as empty when wet.</span>
+      </div>
+      <span class="feature-tag">Open-Meteo API</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">📡</span>
+      <div class="feature-name"><span data-lang="ja">混雑レーダー</span><span data-lang="en">Crowd Radar</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">時間帯別の混雑推定値とユーザー自己報告（120分で自動期限切れ）で、行く前に混み具合がわかります。</span>
+        <span data-lang="en">Time-based estimates plus user self-reports with 120-minute auto-expiry. Know before you go.</span>
+      </div>
+      <span class="feature-tag">Live Reports</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">📍</span>
+      <div class="feature-name"><span data-lang="ja">距離順ソート</span><span data-lang="en">Distance Sorting</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">現在地から近い順に自動並び替え。所要時間も表示。位置情報はデバイス内のみで処理します。</span>
+        <span data-lang="en">Auto-sorted by distance from your location. Estimated travel time included. On-device GPS only.</span>
+      </div>
+      <span class="feature-tag">On-Device GPS</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">⛑</span>
+      <div class="feature-name"><span data-lang="ja">ローカルルール</span><span data-lang="en">Local Rules</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">ヘルメット義務・プロテクターレンタル・会員登録の要否など、Googleマップには載っていない情報。</span>
+        <span data-lang="en">Helmet requirements, pad rentals, membership rules — the stuff Google Maps doesn't tell you.</span>
+      </div>
+      <span class="feature-tag">Hand-Verified</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🌐</span>
+      <div class="feature-name"><span data-lang="ja">完全2か国語</span><span data-lang="en">Bilingual</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">日本語・英語を完全対応。訪日スケーターも東京ローカルも、同じ情報にアクセスできます。</span>
+        <span data-lang="en">Full Japanese and English. Built for visiting skaters as much as Tokyo locals.</span>
+      </div>
+      <span class="feature-tag">JP / EN</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🛹</span>
+      <div class="feature-name"><span data-lang="ja">スケーターが作った</span><span data-lang="en">Built by a Skater</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">全データを現地で確認済み。開発者自身が抱えていた問題を解決するために作られたアプリです。</span>
+        <span data-lang="en">Every data point verified in person. This solves a problem the developer actually has.</span>
+      </div>
+      <span class="feature-tag">SF × Tokyo</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span>Parks</span></div>
+
+<!-- PARKS -->
+<section class="parks" id="parks">
+  <div class="parks-inner">
+    <p class="section-label">Coverage</p>
+    <h2 class="section-title">
+      <span data-lang="ja">17パーク収録<br><em>随時拡大中</em></span>
+      <span data-lang="en">17 parks<br><em>More coming</em></span>
+    </h2>
+    <div class="parks-list">
+      <div class="park-item"><div class="park-name"><span data-lang="ja">駒沢公園</span><span data-lang="en">Komazawa Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">宮下パーク</span><span data-lang="en">Miyashita Park</span></div><div class="park-area">Shibuya</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">有明</span><span data-lang="en">Ariake</span></div><div class="park-area">Koto / Olympic</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">H.L.N.A SKYGARDEN</div><div class="park-area">Koto / Aomi</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">The Yago</span><span data-lang="en">The Yago</span></div><div class="park-area">Ota / Omori</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name">RAMP ZERO</div><div class="park-area">Arakawa</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">DIORAMA</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">夕凪橋 (TMC)</span><span data-lang="en">Yuunagi Bridge (TMC)</span></div><div class="park-area">Minato / Tamachi</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">城南島</span><span data-lang="en">Jonanijima</span></div><div class="park-area">Ota / Haneda</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">夢の島</span><span data-lang="en">Yumenoshima</span></div><div class="park-area">Koto / Shin-Kiba</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">代々木公園</span><span data-lang="en">Yoyogi Park</span></div><div class="park-area">Shibuya / Harajuku</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">New</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">世田谷公園</span><span data-lang="en">Setagaya Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">プラネットパーク</span><span data-lang="en">Planet Park</span></div><div class="park-area">Hachioji</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">TRINITY B3</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">ムラサキ立川立飛</span><span data-lang="en">Murasaki Park Tachikawa</span></div><div class="park-area">Tachikawa</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">八潮北公園</span><span data-lang="en">Yashio Kita Park</span></div><div class="park-area">Shinagawa</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">小菅西公園</span><span data-lang="en">Kosuge Nishi Park</span></div><div class="park-area">Katsushika</div><div class="park-tags"><span class="park-tag tag-new">New '26</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="download">
+  <h2 class="fade-in">
+    <span data-lang="ja">今日どこ滑る？<br><em>答えはここに</em></span>
+    <span data-lang="en">Ready to<br><em>find your spot?</em></span>
+  </h2>
+  <p class="fade-in">
+    <span data-lang="ja">iOS アプリ開発中 · App Store近日公開</span>
+    <span data-lang="en">iOS app in development · Coming to App Store</span>
+  </p>
+  <div class="hero-actions fade-in">
+    <a href="https://instagram.com/tokyoskateradar" target="_blank" class="btn-primary">
+      Follow on Instagram
+    </a>
+    <a href="mailto:support@skateradar.app" class="btn-secondary">
+      <span data-lang="ja">お問い合わせ</span><span data-lang="en">Contact / Support</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">TOKYO SKATE RADAR</div>
+  <div class="footer-links">
+    <a href="#features"><span data-lang="ja">機能</span><span data-lang="en">Features</span></a>
+    <a href="#parks"><span data-lang="ja">パーク</span><span data-lang="en">Parks</span></a>
+    <a href="https://instagram.com/tokyoskateradar" target="_blank">Instagram</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:support@skateradar.app"><span data-lang="ja">サポート</span><span data-lang="en">Support</span></a>
+  </div>
+  <p class="footer-copy">© 2025 Tokyo Skate Radar · Tokyo, Japan · Built by a skater, for skaters</p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.getAttribute('onclick') === "setLang('" + lang + "')") btn.classList.add('active');
+  });
+  // Update all i18n elements
+  document.querySelectorAll('[data-i18n-ja]').forEach(el => {
+    const val = el.getAttribute('data-i18n-' + lang);
+    if (val) el.textContent = val;
+  });
+}
+// Set default
+setLang('ja');
+
+// Intersection observer for fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      e.target.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    }
+  });
+}, {threshold: 0.1});
+document.querySelectorAll('.feature-card, .stat-box, .park-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
