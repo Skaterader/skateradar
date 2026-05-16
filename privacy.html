@@ -5,92 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Tokyo Skate Radar</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
   :root {
-    --black:#050505; --dark:#0f0f0f; --card:#141414;
-    --border:#1e1e1e; --orange:#ff6b00; --text:#f5f5f7;
-    --muted:#8e8e93; --dim:#3a3a3c;
+    --black:  #050505;
+    --dark:   #0f0f0f;
+    --card:   #141414;
+    --border: #1e1e1e;
+    --orange: #ff6b00;
+    --text:   #f5f5f7;
+    --muted:  #8e8e93;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--black);color:var(--text);
-    font-family:-apple-system,'SF Pro Display','Hiragino Sans',sans-serif;
-    line-height:1.7;}
-  nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:16px 32px;
-    background:rgba(5,5,5,0.92);
-    border-bottom:1px solid rgba(255,107,0,0.15);
-    position:sticky;top:0;z-index:100;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: var(--black); }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 16px;
+    max-width: 720px;
+    margin: 0 auto;
   }
-  .nav-title{
-    font-family:'Space Mono',monospace;font-size:15px;
-    font-weight:700;color:var(--orange);letter-spacing:-0.02em;
-    text-decoration:none;
+  header {
+    padding: 24px 0 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .lang-toggle{display:flex;gap:2px;background:var(--border);border-radius:6px;padding:2px;}
-  .lang-btn{
-    padding:4px 10px;font-family:'Space Mono',monospace;
-    font-size:10px;font-weight:700;letter-spacing:0.05em;
-    border:none;border-radius:4px;cursor:pointer;
-    background:transparent;color:var(--muted);transition:all 0.15s;
+  header a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
   }
-  .lang-btn.active{background:var(--orange);color:#000;}
-  .container{max-width:720px;margin:0 auto;padding:60px 24px 100px;}
-  .page-label{
-    font-family:'Space Mono',monospace;font-size:11px;
-    color:var(--orange);letter-spacing:0.2em;text-transform:uppercase;
-    margin-bottom:12px;
+  .lang-toggle { display: flex; gap: 8px; }
+  .lang-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
   }
-  h1{font-size:clamp(28px,5vw,42px);font-weight:800;
-    letter-spacing:-0.03em;margin-bottom:8px;}
-  .updated{
-    font-family:'Space Mono',monospace;font-size:11px;
-    color:var(--muted);margin-bottom:48px;letter-spacing:0.05em;
+  .lang-btn.active { border-color: var(--orange); color: var(--orange); }
+  section { display: none; }
+  section.active { display: block; }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 8px;
   }
-  .notice{
-    background:var(--card);border:1px solid rgba(255,107,0,0.2);
-    border-left:3px solid var(--orange);
-    padding:16px 20px;margin-bottom:40px;
-    font-size:13px;color:var(--muted);
-    font-family:'Space Mono',monospace;
+  .updated {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 40px;
   }
-  h2{
-    font-size:16px;font-weight:700;letter-spacing:-0.01em;
-    margin:36px 0 12px;padding-left:12px;
-    border-left:2px solid var(--orange);color:var(--orange);
-    font-family:'Space Mono',monospace;
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange);
+    margin: 32px 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
-  p{font-size:14px;color:#c0c0c5;margin-bottom:10px;}
-  ul{margin:8px 0 12px 20px;}
-  ul li{font-size:14px;color:#c0c0c5;margin-bottom:6px;}
-  a{color:var(--orange);}
-  footer{
-    border-top:1px solid var(--border);padding:32px 24px;
-    text-align:center;
-    font-family:'Space Mono',monospace;font-size:11px;color:var(--dim);
+  p { color: var(--text); margin-bottom: 12px; }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
   }
-  [data-lang]{display:none;}
-  .lang-ja [data-lang="ja"]{display:block;}
-  .lang-en [data-lang="en"]{display:block;}
+  ul li {
+    color: var(--text);
+    padding: 4px 0 4px 14px;
+    position: relative;
+  }
+  ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+  }
+  strong { color: var(--orange); }
+  a { color: var(--orange); }
+  footer {
+    margin-top: 48px;
+    padding: 20px 0 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--orange); }
 </style>
 </head>
-<body class="lang-ja">
+<body>
 
-<nav>
-  <a href="index.html" class="nav-title">TOKYO SKATE RADAR</a>
+<header>
+  <a href="https://skateradar.app/index.html">TOKYO SKATE RADAR</a>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('ja')">JP</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
-</nav>
+</header>
 
-<!-- JAPANESE -->
-<div data-lang="ja">
-<div class="container">
-  <p class="page-label">Legal</p>
+<!-- 日本語 -->
+<section id="ja" class="active">
   <h1>プライバシーポリシー</h1>
   <p class="updated">最終更新日：2025年5月</p>
-  
 
   <h2>1. はじめに</h2>
   <p>Tokyo Skate Radar（以下「本アプリ」）は、東京都内のスケートパーク情報を提供するアプリケーションです。本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明します。</p>
@@ -116,6 +146,15 @@
     <li><strong>Open-Meteo API：</strong>天気情報の取得に使用。リクエスト時にIPアドレスが送信される場合があります。</li>
     <li><strong>Google Maps：</strong>地図リンク・経路案内のリンクに使用。タップした場合はGoogleの利用規約が適用されます。</li>
     <li><strong>Instagram：</strong>各パークの公式アカウントへのリンクに使用。タップした場合はInstagramの利用規約が適用されます。</li>
+    <li><strong>予約サービス（外部サイト）：</strong>一部パークでは予約ページへのリンクを提供しています。対象は以下のサービスです。タップした場合は各サービスの利用規約・プライバシーポリシーが適用されます。本アプリはこれらのサービスとの間で情報を送受信しません。
+      <ul style="margin-top:8px;">
+        <li>宮下公園スケートパーク（西武造園）</li>
+        <li>有明アーバンスポーツパーク</li>
+        <li>RAMP ZERO</li>
+        <li>ムラサキパーク立川立飛</li>
+        <li>小菅西公園スケートパーク（葛飾区）</li>
+      </ul>
+    </li>
   </ul>
 
   <h2>5. 情報の第三者提供</h2>
@@ -132,16 +171,12 @@
 
   <h2>9. お問い合わせ</h2>
   <p>Email：<a href="mailto:support@skateradar.app">support@skateradar.app</a></p>
-</div>
-</div>
+</section>
 
-<!-- ENGLISH -->
-<div data-lang="en">
-<div class="container">
-  <p class="page-label">Legal</p>
+<!-- English -->
+<section id="en">
   <h1>Privacy Policy</h1>
   <p class="updated">Last updated: May 2025</p>
-  
 
   <h2>1. Introduction</h2>
   <p>Tokyo Skate Radar provides skatepark information for Tokyo, Japan. This Privacy Policy explains how the app handles user information.</p>
@@ -150,7 +185,7 @@
   <ul>
     <li><strong>Location Data:</strong> Used solely to calculate distance and directions. Processed on-device only, never transmitted externally. Location access is optional.</li>
     <li><strong>Crowd Reports:</strong> User-submitted reports are stored only in device local storage.</li>
-    <li><strong>Favorites & Settings:</strong> Stored only in device local storage.</li>
+    <li><strong>Favorites &amp; Settings:</strong> Stored only in device local storage.</li>
   </ul>
 
   <h2>3. Information We Do Not Collect</h2>
@@ -167,6 +202,15 @@
     <li><strong>Open-Meteo API:</strong> Used for weather data. Your device's IP address may be included in API requests.</li>
     <li><strong>Google Maps:</strong> Used for map links and directions. Google's Terms of Service apply when accessed.</li>
     <li><strong>Instagram:</strong> Used for links to park official accounts. Instagram's Terms of Service apply when accessed.</li>
+    <li><strong>Reservation Services (External Sites):</strong> The app provides links to reservation pages for select parks. The following third-party services may be accessed. Their respective Terms of Service and Privacy Policies apply. The app does not transmit any data to these services.
+      <ul style="margin-top:8px;">
+        <li>Miyashita Park Skatepark (Seibu造園)</li>
+        <li>Ariake Urban Sports Park</li>
+        <li>RAMP ZERO</li>
+        <li>Murasaki Park Tachikawa Tachihi</li>
+        <li>Kosuge Nishi Park Skatepark (Katsushika City)</li>
+      </ul>
+    </li>
   </ul>
 
   <h2>5. Data Sharing</h2>
@@ -183,20 +227,21 @@
 
   <h2>9. Contact</h2>
   <p>Email: <a href="mailto:support@skateradar.app">support@skateradar.app</a></p>
-</div>
-</div>
+</section>
 
-<footer>© 2025 Tokyo Skate Radar · <a href="index.html">Home</a> · <a href="mailto:support@skateradar.app">support@skateradar.app</a></footer>
+<footer>
+  <span>© 2025 Tokyo Skate Radar</span>
+  <a href="https://skateradar.app/index.html">Home</a>
+  <a href="mailto:support@skateradar.app">support@skateradar.app</a>
+</footer>
 
 <script>
-function setLang(lang) {
-  document.body.className = 'lang-' + lang;
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    if (btn.getAttribute('onclick') === "setLang('" + lang + "')") btn.classList.add('active');
-  });
-}
-setLang('ja');
+  function setLang(lang) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
 </script>
 </body>
 </html>
