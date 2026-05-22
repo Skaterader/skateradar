@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tokyo Skate Radar — Tokyo's Skatepark Guide</title>
+<meta name="description" content="Tokyo's most precise skatepark guide. Real-time weather, crowd levels, and local rules for every park. Available on iOS.">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CjxkZWZzPgogIDxmaWx0ZXIgaWQ9ImcxIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxmaWx0ZXIgaWQ9ImcyIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxjbGlwUGF0aCBpZD0icm91bmRlZCI+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIvPgogIDwvY2xpcFBhdGg+CjwvZGVmcz4KCjwhLS0gQmFja2dyb3VuZCAtLT4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IiMwYTBhMGEiLz4KCjwhLS0gUmFkYXIgcmluZ3MgLS0+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMTAiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjE2IiBjbGlwLXBhdGg9InVybCgjcm91bmRlZCkiLz4KPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yMyIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjAiICBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzIiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgoKPCEtLSBSYWRhciBzd2VlcCAtLT4KPHBhdGggZD0iTTI1NiwyNTYgTDI1Niw1MCBBMjEwLDIxMCAwIDAsMSA0NDAsMTcwIFoiIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii4wNyIgZmlsdGVyPSJ1cmwoI2cxKSIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSIyNTYiIHkyPSI1MCIgIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSI0NDAiIHkyPSIxNzAiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+Cgo8IS0tIENyb3NzaGFpciAoc3VidGxlKSAtLT4KPGxpbmUgeDE9IjUwIiAgeTE9IjI1NiIgeDI9IjQ2MiIgeTI9IjI1NiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KPGxpbmUgeDE9IjI1NiIgeTE9IjUwIiAgeDI9IjI1NiIgeTI9IjQ2MiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KCjwhLS0gU2thdGVib2FyZCAtLT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2LDI1Nikgcm90YXRlKC0yMCkiPgogIDwhLS0gZGVjayBzaGFkb3cgLS0+CiAgPHJlY3QgeD0iLTEwNSIgeT0iLTI4IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjU2IiByeD0iMjgiIGZpbGw9IiMwYTAwMDAiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBkZWNrIGZhY2UgLS0+CiAgPHJlY3QgeD0iLTEwMiIgeT0iLTI1IiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9IiNjYzQ0MDAiLz4KICA8cmVjdCB4PSItMTAyIiB5PSItMjUiIHdpZHRoPSIyMDQiIGhlaWdodD0iNTAiIHJ4PSIyNSIgZmlsbD0iI2ZmNzcyMiIgb3BhY2l0eT0iLjUiLz4KICA8IS0tIG5vc2UvdGFpbCBnbG93IC0tPgogIDxlbGxpcHNlIGN4PSItODgiIGN5PSIwIiByeD0iMTQiIHJ5PSIyMiIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjMyIi8+CiAgPGVsbGlwc2UgY3g9Ijg4IiAgY3k9IjAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjZmY5OTQ0IiBvcGFjaXR5PSIuMzIiLz4KICA8IS0tIGRlY2sgcmltIC0tPgogIDxyZWN0IHg9Ii0xMDIiIHk9Ii0yNSIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI1MCIgcng9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjg4MDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNCIvPgoKICA8IS0tIFRydWNrcyBmcm9udCAtLT4KICA8cmVjdCB4PSI1MiIgIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9IjU3IiAgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CiAgPCEtLSBUcnVja3MgYmFjayAtLT4KICA8cmVjdCB4PSItOTAiIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9Ii04NSIgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iLTIyIiByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KCiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSIxNyIgZmlsbD0iIzBkMGQwZCIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjMiIGZpbHRlcj0idXJsKCNnMikiLz4KICA8Y2lyY2xlIGN4PSI2NCIgIGN5PSIyMiIgIHI9IjkiICBmaWxsPSIjZmY3NzAwIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSI0IiAgZmlsbD0iI2ZmYWE0NCIvPgoKICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjE3IiBmaWxsPSIjMGQwZDBkIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsdGVyPSJ1cmwoI2cyKSIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9Ii0yMiIgcj0iOSIgIGZpbGw9IiNmZjc3MDAiLz4KICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjQiICBmaWxsPSIjZmZhYTQ0Ii8+CgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iLTcyIiBjeT0iMjIiICByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KPC9nPgoKPCEtLSBDZW50ZXIgZG90IC0tPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiNmZjZiMDAiIGZpbHRlcj0idXJsKCNnMSkiLz4KCjwhLS0gQmxpcCBkb3RzIC0tPgo8Y2lyY2xlIGN4PSIzNjIiIGN5PSIxMzAiIHI9IjciIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii45IiBmaWx0ZXI9InVybCgjZzIpIi8+CjxjaXJjbGUgY3g9IjMxMCIgY3k9IjE3NSIgcj0iNSIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjYiIGZpbHRlcj0idXJsKCNnMikiLz4KCjwhLS0gQm90dG9tIHRleHQgLS0+Cjx0ZXh0IHg9IjI1NiIgeT0iNDQ1IgogIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2UiCiAgZm9udC1zaXplPSIyOCIKICBmb250LXdlaWdodD0iOTAwIgogIGxldHRlci1zcGFjaW5nPSI2IgogIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgZmlsbD0iI2ZmNmIwMCIKICBvcGFjaXR5PSIxIj5TS0FURSBSQURBUjwvdGV4dD4KPC9zdmc+Cg==">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --black:  #050505;
+    --dark:   #0f0f0f;
+    --card:   #141414;
+    --border: #1e1e1e;
+    --orange: #ff6b00;
+    --orange2:#ff8c00;
+    --text:   #f5f5f7;
+    --muted:  #8e8e93;
+    --dim:    #3a3a3c;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; background:var(--black); }
+  body {
+    background:var(--black); color:var(--text);
+    font-family:-apple-system,'SF Pro Display','Hiragino Sans',sans-serif;
+    overflow-x:hidden;
+  }
+
+  /* ── RADAR BG ── */
+  .radar-bg {
+    position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+  }
+  .radar-bg svg {
+    position:absolute; top:50%; left:50%;
+    width:140vmax; height:140vmax;
+    opacity:0.07;
+    transform-origin:center center;
+    animation:radar-spin 60s linear infinite;
+    will-change:transform;
+  }
+  @keyframes radar-spin {
+    from { transform:translate(-50%,-50%) rotate(0deg); }
+    to   { transform:translate(-50%,-50%) rotate(360deg); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    background:rgba(5,5,5,0.88);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,107,0,0.15);
+  }
+  .nav-brand {
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .nav-title {
+    font-family:'Space Mono',monospace;
+    font-size:15px; font-weight:700;
+    color:var(--orange);
+    letter-spacing:-0.02em;
+    line-height:1;
+  }
+  .nav-sub {
+    font-family:'Space Mono',monospace;
+    font-size:9px; color:var(--muted);
+    letter-spacing:0.15em; text-transform:uppercase;
+  }
+  .nav-right { display:flex; align-items:center; gap:24px; }
+  .nav-links { display:flex; gap:24px; list-style:none; }
+  .nav-links a {
+    color:var(--muted); text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+    transition:color 0.2s;
+  }
+  .nav-links a:hover { color:var(--orange); }
+
+  /* LANG TOGGLE */
+  .lang-toggle {
+    display:flex; gap:2px;
+    background:var(--border); border-radius:6px; padding:2px;
+  }
+  .lang-btn {
+    padding:4px 10px;
+    font-family:'Space Mono',monospace;
+    font-size:10px; font-weight:700;
+    letter-spacing:0.05em;
+    border:none; border-radius:4px; cursor:pointer;
+    background:transparent; color:var(--muted);
+    transition:all 0.15s;
+  }
+  .lang-btn.active {
+    background:var(--orange); color:#000;
+  }
+
+  /* ── SECTIONS ── */
+  section { position:relative; z-index:1; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height:100vh;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center; padding:120px 24px 80px;
+  }
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:6px 14px;
+    border:1px solid rgba(255,107,0,0.3); border-radius:20px;
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--orange); letter-spacing:0.1em; text-transform:uppercase;
+    margin-bottom:40px; background:rgba(255,107,0,0.06);
+  }
+  .hero-badge::before {
+    content:''; width:6px; height:6px; border-radius:50%;
+    background:var(--orange); box-shadow:0 0 8px var(--orange);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+  /* Hero title: Space Mono, unified font */
+  .hero-title {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(28px,6vw,64px);
+    font-weight:700;
+    color:var(--orange);
+    letter-spacing:-0.03em;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .hero-title-sub {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(11px,2vw,16px);
+    font-weight:400;
+    color:var(--muted);
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    margin-bottom:40px;
+  }
+
+  .hero-icon {
+    width:min(120px,22vw);
+    margin-bottom:24px;
+    filter:drop-shadow(0 0 40px rgba(255,107,0,0.3));
+  }
+
+  .hero-sub {
+    font-family:'Space Mono',monospace;
+    font-size:clamp(11px,1.8vw,13px);
+    color:var(--muted); letter-spacing:0.08em;
+    text-transform:uppercase; margin-bottom:48px; line-height:2;
+  }
+  .hero-sub span { color:var(--orange); }
+
+  .hero-actions { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+
+  .btn-primary {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 28px; background:var(--orange); color:#000;
+    font-weight:800; font-size:14px; letter-spacing:-0.01em;
+    border-radius:10px; text-decoration:none;
+    transition:all 0.2s; border:none; cursor:pointer;
+    font-family:'Space Mono',monospace;
+  }
+  .btn-primary:hover {
+    background:var(--orange2); transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(255,107,0,0.4);
+  }
+  .btn-secondary {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 28px; background:transparent; color:var(--text);
+    font-size:13px; letter-spacing:0.02em; border-radius:10px;
+    text-decoration:none; border:1px solid var(--dim);
+    transition:all 0.2s; cursor:pointer;
+    font-family:'Space Mono',monospace;
+  }
+  .btn-secondary:hover { border-color:var(--orange); color:var(--orange); transform:translateY(-2px); }
+
+  .scroll-hint {
+    position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    font-family:'Space Mono',monospace; font-size:10px; color:var(--dim);
+    letter-spacing:0.15em; text-transform:uppercase;
+    animation:float 2s ease-in-out infinite;
+  }
+  .scroll-hint::after {
+    content:''; width:1px; height:40px;
+    background:linear-gradient(to bottom,var(--dim),transparent);
+  }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(6px);} }
+
+  /* ── STATS ── */
+  .stats {
+    padding:0 24px 80px; max-width:900px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:2px; text-align:center;
+  }
+  .stat-box {
+    padding:40px 20px; border:1px solid var(--border); background:var(--card);
+    transition:background 0.2s;
+  }
+  .stat-box:hover { background:#1a1a1a; }
+  .stat-num {
+    font-size:clamp(36px,6vw,56px); font-weight:900;
+    letter-spacing:-0.04em; color:var(--orange);
+    line-height:1; margin-bottom:8px;
+    font-family:'Space Mono',monospace;
+  }
+  .stat-label {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:0.1em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display:flex; align-items:center; gap:16px;
+    padding:0 24px; max-width:1100px; margin:0 auto 0; opacity:0.35;
+  }
+  .divider::before,.divider::after {
+    content:''; flex:1; height:1px; background:var(--orange);
+  }
+  .divider span {
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--orange); letter-spacing:0.2em;
+    text-transform:uppercase; white-space:nowrap;
+  }
+
+  /* ── FEATURES ── */
+  .features { padding:80px 24px; max-width:1100px; margin:0 auto; }
+  .section-label {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--orange); letter-spacing:0.2em;
+    text-transform:uppercase; margin-bottom:16px;
+  }
+  .section-title {
+    font-size:clamp(28px,5vw,48px); font-weight:800;
+    letter-spacing:-0.03em; line-height:1.1; margin-bottom:60px;
+  }
+  .section-title em { font-style:normal; color:var(--orange); }
+  .features-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2px;
+  }
+  .feature-card {
+    background:var(--card); padding:40px 36px;
+    border:1px solid var(--border); transition:all 0.3s;
+    position:relative; overflow:hidden;
+  }
+  .feature-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:var(--orange); transform:scaleX(0); transform-origin:left;
+    transition:transform 0.3s;
+  }
+  .feature-card:hover::before { transform:scaleX(1); }
+  .feature-card:hover { background:#181818; }
+  .feature-icon { font-size:32px; margin-bottom:20px; display:block; }
+  .feature-name { font-size:18px; font-weight:700; letter-spacing:-0.02em; margin-bottom:10px; }
+  .feature-desc { font-size:14px; color:var(--muted); line-height:1.7; }
+  .feature-tag {
+    display:inline-block; margin-top:16px;
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--orange); letter-spacing:0.1em; text-transform:uppercase;
+  }
+
+  /* ── PARKS ── */
+  .parks { padding:80px 24px; background:var(--dark); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .parks-inner { max-width:1100px; margin:0 auto; }
+  .parks-list {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:1px; margin-top:40px; border:1px solid var(--border);
+  }
+  .park-item { padding:20px 24px; background:var(--card); transition:background 0.2s; border:1px solid var(--border); }
+  .park-item:hover { background:#1a1a1a; }
+  .park-name { font-size:13px; font-weight:700; margin-bottom:4px; }
+  .park-area {
+    font-family:'Space Mono',monospace; font-size:10px;
+    color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .park-tags { display:flex; gap:4px; margin-top:8px; flex-wrap:wrap; }
+  .park-tag {
+    font-size:9px; padding:2px 6px; border-radius:2px;
+    font-family:'Space Mono',monospace; text-transform:uppercase;
+  }
+  .tag-free { background:rgba(48,209,88,0.15); color:#30d158; }
+  .tag-indoor { background:rgba(100,150,255,0.15); color:#6496ff; }
+  .tag-new { background:rgba(255,107,0,0.15); color:var(--orange); }
+
+  /* ── CTA ── */
+  .cta { padding:120px 24px; text-align:center; position:relative; overflow:hidden; }
+  .cta::before {
+    content:''; position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:600px; height:600px;
+    background:radial-gradient(circle,rgba(255,107,0,0.08) 0%,transparent 70%);
+    pointer-events:none;
+  }
+  .cta h2 {
+    font-size:clamp(32px,6vw,64px); font-weight:900;
+    letter-spacing:-0.04em; line-height:1.05;
+    margin-bottom:24px; position:relative;
+  }
+  .cta h2 em { font-style:normal; color:var(--orange); }
+  .cta p {
+    font-family:'Space Mono',monospace; font-size:13px;
+    color:var(--muted); letter-spacing:0.05em;
+    margin-bottom:48px; position:relative;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top:1px solid var(--border); padding:48px 32px;
+    display:flex; flex-direction:column; align-items:center; gap:24px; text-align:center;
+  }
+  .footer-title {
+    font-family:'Space Mono',monospace; font-size:18px; font-weight:700;
+    color:var(--orange); letter-spacing:-0.02em;
+  }
+  .footer-links { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; }
+  .footer-links a {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--muted); text-decoration:none;
+    letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s;
+  }
+  .footer-links a:hover { color:var(--orange); }
+  .footer-copy {
+    font-family:'Space Mono',monospace; font-size:11px;
+    color:var(--dim); letter-spacing:0.05em;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width:640px) {
+    nav { padding:14px 20px; }
+    .nav-links { display:none; }
+    .hero-title { font-size:clamp(24px,8vw,40px); }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity:0; transform:translateY(24px);
+    animation:fadeIn 0.8s ease forwards;
+  }
+  .fade-in:nth-child(1){animation-delay:0.1s;}
+  .fade-in:nth-child(2){animation-delay:0.2s;}
+  .fade-in:nth-child(3){animation-delay:0.3s;}
+  .fade-in:nth-child(4){animation-delay:0.4s;}
+  @keyframes fadeIn { to{opacity:1;transform:translateY(0);} }
+
+  /* ── I18N ── */
+  [data-lang] { display:none; }
+  .lang-ja [data-lang="ja"] { display:block; }
+  .lang-en [data-lang="en"] { display:block; }
+  .lang-ja [data-lang="ja"].inline { display:inline; }
+  .lang-en [data-lang="en"].inline { display:inline; }
+  /* default ja */
+  body { display:block; }
+</style>
+</head>
+<body class="lang-ja">
+
+<!-- Radar BG -->
+<div class="radar-bg">
+  <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="400" r="80"  fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="160" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="240" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="320" fill="none" stroke="#ff6b00" stroke-width="1"/>
+    <circle cx="400" cy="400" r="380" fill="none" stroke="#ff6b00" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#ff6b00" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="800" stroke="#ff6b00" stroke-width="0.5"/>
+    <path d="M400,400 L400,80 A320,320 0 0,1 626,174 Z" fill="#ff6b00" opacity="0.4"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-title">TOKYO SKATE RADAR</div>
+    <div class="nav-sub">Skatepark Guide · Tokyo</div>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#features" data-i18n-ja="機能" data-i18n-en="Features">機能</a></li>
+      <li><a href="#parks" data-i18n-ja="パーク" data-i18n-en="Parks">パーク</a></li>
+      <li><a href="#download" data-i18n-ja="ダウンロード" data-i18n-en="Download">Download</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ja')">JP</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge fade-in">
+    🛹 <span data-lang="ja">App Store 公開中 · 無料</span><span data-lang="en">Now on the App Store · Free</span>
+  </div>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CjxkZWZzPgogIDxmaWx0ZXIgaWQ9ImcxIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxmaWx0ZXIgaWQ9ImcyIj4KICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIiIHJlc3VsdD0iYiIvPgogICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogIDwvZmlsdGVyPgogIDxjbGlwUGF0aCBpZD0icm91bmRlZCI+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIvPgogIDwvY2xpcFBhdGg+CjwvZGVmcz4KCjwhLS0gQmFja2dyb3VuZCAtLT4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IiMwYTBhMGEiLz4KCjwhLS0gUmFkYXIgcmluZ3MgLS0+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMTAiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjE2IiBjbGlwLXBhdGg9InVybCgjcm91bmRlZCkiLz4KPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yMyIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjAiICBmaWxsPSJub25lIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzIiIGNsaXAtcGF0aD0idXJsKCNyb3VuZGVkKSIvPgoKPCEtLSBSYWRhciBzd2VlcCAtLT4KPHBhdGggZD0iTTI1NiwyNTYgTDI1Niw1MCBBMjEwLDIxMCAwIDAsMSA0NDAsMTcwIFoiIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii4wNyIgZmlsdGVyPSJ1cmwoI2cxKSIgY2xpcC1wYXRoPSJ1cmwoI3JvdW5kZWQpIi8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSIyNTYiIHkyPSI1MCIgIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+CjxsaW5lIHgxPSIyNTYiIHkxPSIyNTYiIHgyPSI0NDAiIHkyPSIxNzAiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii41Ii8+Cgo8IS0tIENyb3NzaGFpciAoc3VidGxlKSAtLT4KPGxpbmUgeDE9IjUwIiAgeTE9IjI1NiIgeDI9IjQ2MiIgeTI9IjI1NiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KPGxpbmUgeDE9IjI1NiIgeTE9IjUwIiAgeDI9IjI1NiIgeTI9IjQ2MiIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9Ii44IiBvcGFjaXR5PSIuMDgiLz4KCjwhLS0gU2thdGVib2FyZCAtLT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2LDI1Nikgcm90YXRlKC0yMCkiPgogIDwhLS0gZGVjayBzaGFkb3cgLS0+CiAgPHJlY3QgeD0iLTEwNSIgeT0iLTI4IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjU2IiByeD0iMjgiIGZpbGw9IiMwYTAwMDAiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBkZWNrIGZhY2UgLS0+CiAgPHJlY3QgeD0iLTEwMiIgeT0iLTI1IiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9IiNjYzQ0MDAiLz4KICA8cmVjdCB4PSItMTAyIiB5PSItMjUiIHdpZHRoPSIyMDQiIGhlaWdodD0iNTAiIHJ4PSIyNSIgZmlsbD0iI2ZmNzcyMiIgb3BhY2l0eT0iLjUiLz4KICA8IS0tIG5vc2UvdGFpbCBnbG93IC0tPgogIDxlbGxpcHNlIGN4PSItODgiIGN5PSIwIiByeD0iMTQiIHJ5PSIyMiIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjMyIi8+CiAgPGVsbGlwc2UgY3g9Ijg4IiAgY3k9IjAiIHJ4PSIxNCIgcnk9IjIyIiBmaWxsPSIjZmY5OTQ0IiBvcGFjaXR5PSIuMzIiLz4KICA8IS0tIGRlY2sgcmltIC0tPgogIDxyZWN0IHg9Ii0xMDIiIHk9Ii0yNSIgd2lkdGg9IjIwNCIgaGVpZ2h0PSI1MCIgcng9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjg4MDAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNCIvPgoKICA8IS0tIFRydWNrcyBmcm9udCAtLT4KICA8cmVjdCB4PSI1MiIgIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9IjU3IiAgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CiAgPCEtLSBUcnVja3MgYmFjayAtLT4KICA8cmVjdCB4PSItOTAiIHk9Ii0xMCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzc3NyIvPgogIDxyZWN0IHg9Ii04NSIgeT0iLTE0IiB3aWR0aD0iMjgiIGhlaWdodD0iNyIgIHJ4PSIzIiBmaWxsPSIjOTk5Ii8+CgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iLTIyIiByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9IjY0IiAgY3k9Ii0yMiIgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KCiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSIxNyIgZmlsbD0iIzBkMGQwZCIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjMiIGZpbHRlcj0idXJsKCNnMikiLz4KICA8Y2lyY2xlIGN4PSI2NCIgIGN5PSIyMiIgIHI9IjkiICBmaWxsPSIjZmY3NzAwIi8+CiAgPGNpcmNsZSBjeD0iNjQiICBjeT0iMjIiICByPSI0IiAgZmlsbD0iI2ZmYWE0NCIvPgoKICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjE3IiBmaWxsPSIjMGQwZDBkIiBzdHJva2U9IiNmZjZiMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsdGVyPSJ1cmwoI2cyKSIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9Ii0yMiIgcj0iOSIgIGZpbGw9IiNmZjc3MDAiLz4KICA8Y2lyY2xlIGN4PSItNzIiIGN5PSItMjIiIHI9IjQiICBmaWxsPSIjZmZhYTQ0Ii8+CgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iMTciIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2ZmNmIwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWx0ZXI9InVybCgjZzIpIi8+CiAgPGNpcmNsZSBjeD0iLTcyIiBjeT0iMjIiICByPSI5IiAgZmlsbD0iI2ZmNzcwMCIvPgogIDxjaXJjbGUgY3g9Ii03MiIgY3k9IjIyIiAgcj0iNCIgIGZpbGw9IiNmZmFhNDQiLz4KPC9nPgoKPCEtLSBDZW50ZXIgZG90IC0tPgo8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiNmZjZiMDAiIGZpbHRlcj0idXJsKCNnMSkiLz4KCjwhLS0gQmxpcCBkb3RzIC0tPgo8Y2lyY2xlIGN4PSIzNjIiIGN5PSIxMzAiIHI9IjciIGZpbGw9IiNmZjZiMDAiIG9wYWNpdHk9Ii45IiBmaWx0ZXI9InVybCgjZzIpIi8+CjxjaXJjbGUgY3g9IjMxMCIgY3k9IjE3NSIgcj0iNSIgZmlsbD0iI2ZmOTk0NCIgb3BhY2l0eT0iLjYiIGZpbHRlcj0idXJsKCNnMikiLz4KCjwhLS0gQm90dG9tIHRleHQgLS0+Cjx0ZXh0IHg9IjI1NiIgeT0iNDQ1IgogIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2UiCiAgZm9udC1zaXplPSIyOCIKICBmb250LXdlaWdodD0iOTAwIgogIGxldHRlci1zcGFjaW5nPSI2IgogIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgZmlsbD0iI2ZmNmIwMCIKICBvcGFjaXR5PSIxIj5TS0FURSBSQURBUjwvdGV4dD4KPC9zdmc+Cg==" alt="Tokyo Skate Radar" class="hero-icon fade-in">
+  <h1 class="hero-title fade-in">TOKYO SKATE RADAR</h1>
+  <p class="hero-title-sub fade-in"><span data-lang="ja">Skatepark Guide · 東京</span><span data-lang="en">Skatepark Guide · Tokyo</span></p>
+  <p class="hero-sub fade-in">
+    <span data-lang="ja">東京で最も正確なスケートパーク情報<br><span>天気 · 混雑 · 営業時間 · ローカルルール</span><br>訪日スケーターにも完全英語対応</span>
+    <span data-lang="en">Tokyo's most precise skatepark guide<br><span>Weather · Crowd · Hours · Local Rules</span><br>Fully bilingual for visiting skaters</span>
+  </p>
+  <div class="hero-actions fade-in">
+    <a href="https://apps.apple.com/jp/app/tokyo-skate-radar/id6769969051" target="_blank" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <span data-lang="ja">App Store でダウンロード</span><span data-lang="en">Download on the App Store</span>
+    </a>
+    <a href="#features" class="btn-secondary">
+      <span data-lang="ja">詳しく見る →</span><span data-lang="en">Learn More →</span>
+    </a>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-box">
+    <div class="stat-num">26</div>
+    <div class="stat-label" data-i18n-ja="収録パーク数" data-i18n-en="Parks Covered">収録パーク数</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">EN/JP</div>
+    <div class="stat-label" data-i18n-ja="完全2か国語" data-i18n-en="Bilingual">完全2か国語</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">8h</div>
+    <div class="stat-label" data-i18n-ja="天気予報" data-i18n-en="Weather Forecast">天気予報</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">0¥</div>
+    <div class="stat-label" data-i18n-ja="無料で使える" data-i18n-en="Free to Use">無料で使える</div>
+  </div>
+</div>
+
+<div class="divider"><span>Features</span></div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <p class="section-label">What it does</p>
+  <h2 class="section-title">
+    <span data-lang="ja">滑る前に必要な情報が<br><em>全部ここにある</em></span>
+    <span data-lang="en">Everything you need<br>before you <em>drop in</em></span>
+  </h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🌦</span>
+      <div class="feature-name"><span data-lang="ja">リアルタイム天気</span><span data-lang="en">Real-Time Weather</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">各パークの現在の天気と8時間予報。雨天時は屋外パークの混雑を自動的に「空き」として補正します。</span>
+        <span data-lang="en">Live conditions + 8-hour forecast per park. Rain suppression logic auto-marks outdoor parks as empty when wet.</span>
+      </div>
+      <span class="feature-tag">Open-Meteo API</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">📡</span>
+      <div class="feature-name"><span data-lang="ja">混雑レーダー</span><span data-lang="en">Crowd Radar</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">時間帯別の混雑推定値とユーザー自己報告（120分で自動期限切れ）で、行く前に混み具合がわかります。</span>
+        <span data-lang="en">Time-based estimates plus user self-reports with 120-minute auto-expiry. Know before you go.</span>
+      </div>
+      <span class="feature-tag">Live Reports</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">📍</span>
+      <div class="feature-name"><span data-lang="ja">距離順ソート</span><span data-lang="en">Distance Sorting</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">現在地から近い順に自動並び替え。所要時間も表示。位置情報はデバイス内のみで処理します。</span>
+        <span data-lang="en">Auto-sorted by distance from your location. Estimated travel time included. On-device GPS only.</span>
+      </div>
+      <span class="feature-tag">On-Device GPS</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">⛑</span>
+      <div class="feature-name"><span data-lang="ja">ローカルルール</span><span data-lang="en">Local Rules</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">ヘルメット義務・プロテクターレンタル・会員登録の要否など、Googleマップには載っていない情報。</span>
+        <span data-lang="en">Helmet requirements, pad rentals, membership rules — the stuff Google Maps doesn't tell you.</span>
+      </div>
+      <span class="feature-tag">Hand-Verified</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🌐</span>
+      <div class="feature-name"><span data-lang="ja">完全2か国語</span><span data-lang="en">Bilingual</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">日本語・英語を完全対応。訪日スケーターも東京ローカルも、同じ情報にアクセスできます。</span>
+        <span data-lang="en">Full Japanese and English. Built for visiting skaters as much as Tokyo locals.</span>
+      </div>
+      <span class="feature-tag">JP / EN</span>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🛹</span>
+      <div class="feature-name"><span data-lang="ja">スケーターが作った</span><span data-lang="en">Built by a Skater</span></div>
+      <div class="feature-desc">
+        <span data-lang="ja">全データを現地で確認済み。開発者自身が抱えていた問題を解決するために作られたアプリです。</span>
+        <span data-lang="en">Every data point verified in person. This solves a problem the developer actually has.</span>
+      </div>
+      <span class="feature-tag">SF × Tokyo</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span>Parks</span></div>
+
+<!-- PARKS -->
+<section class="parks" id="parks">
+  <div class="parks-inner">
+    <p class="section-label">Coverage</p>
+    <h2 class="section-title">
+      <span data-lang="ja">26パーク収録<br><em>随時拡大中</em></span>
+      <span data-lang="en">26 parks<br><em>More coming</em></span>
+    </h2>
+    <div class="parks-list">
+      <div class="park-item"><div class="park-name"><span data-lang="ja">駒沢公園</span><span data-lang="en">Komazawa Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">宮下パーク</span><span data-lang="en">Miyashita Park</span></div><div class="park-area">Shibuya</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">有明</span><span data-lang="en">Ariake</span></div><div class="park-area">Koto / Olympic</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">H.L.N.A SKYGARDEN</div><div class="park-area">Koto / Aomi</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">The Yago</span><span data-lang="en">The Yago</span></div><div class="park-area">Ota / Omori</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name">RAMP ZERO</div><div class="park-area">Arakawa</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">DIORAMA</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">夕凪橋 (TMC)</span><span data-lang="en">Yuunagi Bridge (TMC)</span></div><div class="park-area">Minato / Tamachi</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">城南島</span><span data-lang="en">Jonanijima</span></div><div class="park-area">Ota / Haneda</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">夢の島</span><span data-lang="en">Yumenoshima</span></div><div class="park-area">Koto / Shin-Kiba</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">代々木公園</span><span data-lang="en">Yoyogi Park</span></div><div class="park-area">Shibuya / Harajuku</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">New</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">世田谷公園</span><span data-lang="en">Setagaya Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">プラネットパーク</span><span data-lang="en">Planet Park</span></div><div class="park-area">Hachioji</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name">TRINITY B3</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">ムラサキ立川立飛</span><span data-lang="en">Murasaki Park Tachikawa</span></div><div class="park-area">Tachikawa</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">八潮北公園</span><span data-lang="en">Yashio Kita Park</span></div><div class="park-area">Shinagawa</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">小菅西公園</span><span data-lang="en">Kosuge Nishi Park</span></div><div class="park-area">Katsushika</div><div class="park-tags"><span class="park-tag tag-new">New '26</span></div></div>
+
+      <div class="park-item"><div class="park-name"><span data-lang="ja">池袋スケートパーク</span><span data-lang="en">Ikebukuro Skatepark</span></div><div class="park-area">Toshima / Ikebukuro</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">祖師谷公園</span><span data-lang="en">Soshigaya Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">堤通公園</span><span data-lang="en">Tsutsumidori Park</span></div><div class="park-area">Sumida / Hikifune</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">宮城ファミリー公園</span><span data-lang="en">Miyagi Family Park</span></div><div class="park-area">Adachi</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">大師河原公園</span><span data-lang="en">Daishigawara Park</span></div><div class="park-area">Kawasaki</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name">KAWASAKI KEIRIN PARK</div><div class="park-area">Kawasaki</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">Stone</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">新横浜公園スケボー広場</span><span data-lang="en">Shin-Yokohama Park</span></div><div class="park-area">Yokohama / H.L.N.A</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name">8Times Corner Store</div><div class="park-area">Adachi / Nishi-Arai</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name">BASHI BURGER CHANCE</div><div class="park-area">Kawaguchi, Saitama</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="download">
+  <h2 class="fade-in">
+    <span data-lang="ja">今日どこ滑る？<br><em>答えはここに</em></span>
+    <span data-lang="en">Ready to<br><em>find your spot?</em></span>
+  </h2>
+  <p class="fade-in">
+    <span data-lang="ja">App Store にて無料配信中</span>
+    <span data-lang="en">Free on the App Store</span>
+  </p>
+  <div class="hero-actions fade-in">
+    <a href="https://apps.apple.com/jp/app/tokyo-skate-radar/id6769969051" target="_blank" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <span data-lang="ja">App Store でダウンロード</span><span data-lang="en">Download on the App Store</span>
+    </a>
+    <a href="mailto:support@skateradar.app" class="btn-secondary">
+      <span data-lang="ja">お問い合わせ</span><span data-lang="en">Contact / Support</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">TOKYO SKATE RADAR</div>
+  <div class="footer-links">
+    <a href="#features"><span data-lang="ja">機能</span><span data-lang="en">Features</span></a>
+    <a href="#parks"><span data-lang="ja">パーク</span><span data-lang="en">Parks</span></a>
+    <a href="https://instagram.com/tokyoskateradar" target="_blank">Instagram</a>
+    <a href="https://x.com/SkateRadars" target="_blank">X</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:support@skateradar.app"><span data-lang="ja">サポート</span><span data-lang="en">Support</span></a>
+  </div>
+  <p class="footer-copy">© 2026 Tokyo Skate Radar · Tokyo, Japan · Built by a skater, for skaters</p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.getAttribute('onclick') === "setLang('" + lang + "')") btn.classList.add('active');
+  });
+  // Update all i18n elements
+  document.querySelectorAll('[data-i18n-ja]').forEach(el => {
+    const val = el.getAttribute('data-i18n-' + lang);
+    if (val) el.textContent = val;
+  });
+}
+// Set default
+setLang('ja');
+
+// Intersection observer for fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      e.target.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    }
+  });
+}, {threshold: 0.1});
+document.querySelectorAll('.feature-card, .stat-box, .park-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
