@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tokyo Skate Radar — Tokyo's Skatepark Guide</title>
-<meta name="description" content="Tokyo's most precise skatepark guide. Real-time weather, open-now status with seasonal hours and closures, surface drying estimates after rain, crowd levels, and local rules for every park. Available on iOS.">
+<meta name="description" content="Skatepark guide for 28 parks around Tokyo. Open-now status with seasonal hours and closures, this week's calendar, surface drying estimates after rain, weather and local rules. Free on iOS.">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -330,6 +330,9 @@
     letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s;
   }
   .footer-links a:hover { color:var(--orange); }
+  .footer-links a.social-link { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; margin:-12px 0; }
+  .footer-links a.social-link img { display:block; opacity:0.6; transition:opacity 0.2s; }
+  .footer-links a.social-link:hover img, .footer-links a.social-link:focus-visible img { opacity:1; }
   .footer-copy {
     font-family:'Space Mono',monospace; font-size:11px;
     color:var(--dim); letter-spacing:0.05em;
@@ -422,8 +425,8 @@
   <h1 class="hero-title fade-in">TOKYO SKATE RADAR</h1>
   <p class="hero-title-sub fade-in"><span data-lang="ja">Skatepark Guide · 東京</span><span data-lang="en">Skatepark Guide · Tokyo</span></p>
   <p class="hero-sub fade-in">
-    <span data-lang="ja">東京で最も正確なスケートパーク情報<br><span>天気 · 路面乾燥 · 混雑 · 営業時間 · ローカルルール</span><br>訪日スケーターにも完全英語対応</span>
-    <span data-lang="en">Tokyo's most precise skatepark guide<br><span>Weather · Surface Drying · Crowd · Hours · Local Rules</span><br>Fully bilingual for visiting skaters</span>
+    <span data-lang="ja">東京近郊28パークのスケートパーク情報<br><span>営業時間 · 路面乾燥 · 天気 · ローカルルール</span><br>訪日スケーターにも完全英語対応</span>
+    <span data-lang="en">Skatepark guide for 28 parks around Tokyo<br><span>Hours · Surface Drying · Weather · Local Rules</span><br>Fully bilingual for visiting skaters</span>
   </p>
   <div class="hero-actions fade-in">
     <a href="https://apps.apple.com/jp/app/tokyo-skate-radar/id6769969051" target="_blank" class="btn-primary">
@@ -440,53 +443,52 @@
 <!-- STATS -->
 <!-- WHAT'S NEW -->
 <section style="padding:60px 24px 0;max-width:900px;margin:0 auto;">
-  <p class="section-label">What's New · Version 1.1</p>
+  <p class="section-label">What's New · Version 1.1.2</p>
   <h2 class="section-title" style="margin-bottom:32px;">
-    <span data-lang="ja">雨上がり、<em>いつ滑れる？</em></span>
-    <span data-lang="en">After the rain, <em>when can you skate?</em></span>
+    <span data-lang="ja">収録パークが<em>28</em>に。</span>
+    <span data-lang="en">Now <em>28</em> parks.</span>
   </h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
     <div class="feature-card" style="padding:28px;grid-column:1/-1;">
-      <span class="feature-icon">💧</span>
+      <span class="feature-icon">📍</span>
       <div class="feature-name">
-        <span data-lang="ja">路面乾燥表示 NEW</span>
-        <span data-lang="en">Surface Drying Status NEW</span>
+        <span data-lang="ja">新しいパーク NEW</span>
+        <span data-lang="en">New Parks NEW</span>
       </div>
       <div class="feature-desc">
-        <span data-lang="ja">雨が止んだあと、各パークの路面が乾くまでの目安をカードに表示します。「乾燥中」「もうすぐ乾く」「滑れる」の3段階と、乾くまでの残り時間がひと目でわかります。<br><br>気象データからの推定値です。実際の路面は現地でご確認ください。<br><br><a href="#drying-model" style="color:var(--orange);text-decoration:none;">計算の仕組みを見る →</a></span>
-        <span data-lang="en">After the rain stops, each park card shows an estimate of when the surface will be dry — "Drying", "Almost dry" or "Skatable", plus the time left.<br><br>It's an estimate from weather data — always check the surface on site.<br><br><a href="#drying-model" style="color:var(--orange);text-decoration:none;">How it works →</a></span>
-      </div>
-      <span class="feature-tag">Modified Penman Model</span>
-    </div>
-    <div class="feature-card" style="padding:24px;">
-      <span class="feature-icon">🕒</span>
-      <div class="feature-name">
-        <span data-lang="ja">営業時間をより正確に</span>
-        <span data-lang="en">More Accurate Hours</span>
-      </div>
-      <div class="feature-desc">
-        <span data-lang="ja">季節ごとの営業時間や第◯曜日の定休、祝日、年末年始まで反映。「今開いているか」を正確に表示します。</span>
-        <span data-lang="en">Seasonal hours, monthly closures, Japanese holidays and the New Year break are now reflected in the open-now status.</span>
+        <span data-lang="ja">武蔵野公園スケートボード広場（府中）と、鵠沼海浜公園 HUG-RIDE PARK（藤沢）を追加しました。墨田区のパークは、閉鎖された堤通公園から後継の「すみだスケートボードパーク」に更新しています。</span>
+        <span data-lang="en">Added Musashino Park Skateboard Plaza (Fuchu) and Kugenuma Seaside Park HUG-RIDE PARK (Fujisawa). The closed Tsutsumidori Park has been replaced by its successor, Sumida Skateboard Park.</span>
       </div>
     </div>
     <div class="feature-card" style="padding:24px;">
-      <span class="feature-icon">✦</span>
+      <span class="feature-icon">🗓</span>
       <div class="feature-name">
-        <span data-lang="ja">その他の改善</span>
-        <span data-lang="en">Other Improvements</span>
+        <span data-lang="ja">今週の営業カレンダー</span>
+        <span data-lang="en">This Week's Calendar</span>
       </div>
       <div class="feature-desc">
-        <span data-lang="ja">パークカードの開閉、お気に入り、Instagramリンクの動作を改善しました。</span>
-        <span data-lang="en">Improved park cards, favorites and Instagram links.</span>
+        <span data-lang="ja">今日から7日分の営業時間と休みを、パークごとに一覧できます。第◯曜日の定休も見落としません。</span>
+        <span data-lang="en">See the next 7 days of opening hours and closed days for every park — no more missing a monthly closure.</span>
+      </div>
+    </div>
+    <div class="feature-card" style="padding:24px;">
+      <span class="feature-icon">↻</span>
+      <div class="feature-name">
+        <span data-lang="ja">引っ張って更新</span>
+        <span data-lang="en">Pull to Refresh</span>
+      </div>
+      <div class="feature-desc">
+        <span data-lang="ja">一覧を下に引っ張ると、天気と路面の情報を最新にできます。アプリを開き直したときも自動で更新します。</span>
+        <span data-lang="en">Pull down the list to refresh weather and surface conditions. The app also refreshes automatically when you come back to it.</span>
       </div>
     </div>
   </div>
-  <p style="text-align:center;font-size:12px;color:var(--text2);margin-top:24px;font-family:var(--mono);">November 2026</p>
+  <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:24px;font-family:'Space Mono',monospace;">November 2026</p>
 </section>
 
 <div class="stats">
   <div class="stat-box">
-    <div class="stat-num">26</div>
+    <div class="stat-num">28</div>
     <div class="stat-label" data-i18n-ja="収録パーク数" data-i18n-en="Parks Covered">収録パーク数</div>
   </div>
   <div class="stat-box">
@@ -524,10 +526,10 @@
     </div>
     <div class="feature-card">
       <span class="feature-icon">🌦</span>
-      <div class="feature-name"><span data-lang="ja">リアルタイム天気</span><span data-lang="en">Real-Time Weather</span></div>
+      <div class="feature-name"><span data-lang="ja">天気</span><span data-lang="en">Weather</span></div>
       <div class="feature-desc">
-        <span data-lang="ja">各パークの現在の天気をリアルタイム表示。雨天時は屋外パークの混雑を自動的に「空き」として補正します。</span>
-        <span data-lang="en">Live conditions for every park. Rain suppression logic auto-marks outdoor parks as empty when wet.</span>
+        <span data-lang="ja">各パークの現在の天気と気温を表示。路面乾燥の推定にも使っています。</span>
+        <span data-lang="en">Current weather and temperature for every park — also used to estimate surface drying.</span>
       </div>
       <span class="feature-tag">Open-Meteo API</span>
     </div>
@@ -535,8 +537,8 @@
       <span class="feature-icon">📡</span>
       <div class="feature-name"><span data-lang="ja">混雑レーダー</span><span data-lang="en">Crowd Radar</span></div>
       <div class="feature-desc">
-        <span data-lang="ja">時間帯ごとの混雑推定をグラフで表示。行く前に混み具合の目安がわかります。</span>
-        <span data-lang="en">Hour-by-hour crowd estimates shown as a chart. Know what to expect before you go.</span>
+        <span data-lang="ja">時間帯ごとの混雑の目安を、一部のパークでグラフ表示します。</span>
+        <span data-lang="en">A rough hour-by-hour crowd guide, shown as a chart for some parks.</span>
       </div>
       <span class="feature-tag">Hourly Estimates</span>
     </div>
@@ -571,8 +573,8 @@
       <span class="feature-icon">🛹</span>
       <div class="feature-name"><span data-lang="ja">スケーターが作った</span><span data-lang="en">Built by a Skater</span></div>
       <div class="feature-desc">
-        <span data-lang="ja">全データを現地で確認済み。開発者自身が抱えていた問題を解決するために作られたアプリです。</span>
-        <span data-lang="en">Every data point verified in person. This solves a problem the developer actually has.</span>
+        <span data-lang="ja">営業時間や定休日は、各パークの公式情報で確認してから載せています。開発者自身が抱えていた問題を解決するために作られたアプリです。</span>
+        <span data-lang="en">Hours and closures are checked against each park's official information. This solves a problem the developer actually has.</span>
       </div>
       <span class="feature-tag">SF × Tokyo</span>
     </div>
@@ -586,8 +588,8 @@
   <div class="parks-inner">
     <p class="section-label">Coverage</p>
     <h2 class="section-title">
-      <span data-lang="ja">26パーク収録<br><em>随時拡大中</em></span>
-      <span data-lang="en">26 parks<br><em>More coming</em></span>
+      <span data-lang="ja">28パーク収録<br><em>随時拡大中</em></span>
+      <span data-lang="en">28 parks<br><em>More coming</em></span>
     </h2>
     <div class="parks-list">
       <div class="park-item"><div class="park-name"><span data-lang="ja">駒沢公園</span><span data-lang="en">Komazawa Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
@@ -598,25 +600,27 @@
       <div class="park-item"><div class="park-name">RAMP ZERO</div><div class="park-area">Arakawa</div><div class="park-tags"></div></div>
       <div class="park-item"><div class="park-name">DIORAMA</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">夕凪橋 (TMC)</span><span data-lang="en">Yuunagi Bridge (TMC)</span></div><div class="park-area">Minato / Tamachi</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
-      <div class="park-item"><div class="park-name"><span data-lang="ja">城南島</span><span data-lang="en">Jonanijima</span></div><div class="park-area">Ota / Haneda</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
-      <div class="park-item"><div class="park-name"><span data-lang="ja">夢の島</span><span data-lang="en">Yumenoshima</span></div><div class="park-area">Koto / Shin-Kiba</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
-      <div class="park-item"><div class="park-name"><span data-lang="ja">代々木公園</span><span data-lang="en">Yoyogi Park</span></div><div class="park-area">Shibuya / Harajuku</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">New</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">城南島</span><span data-lang="en">Jonanjima</span></div><div class="park-area">Ota / Haneda</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">夢の島</span><span data-lang="en">Yumenoshima</span></div><div class="park-area">Koto / Shin-Kiba</div><div class="park-tags"></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">代々木公園</span><span data-lang="en">Yoyogi Park</span></div><div class="park-area">Shibuya / Harajuku</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">世田谷公園</span><span data-lang="en">Setagaya Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">プラネットパーク</span><span data-lang="en">Planet Park</span></div><div class="park-area">Hachioji</div><div class="park-tags"></div></div>
       <div class="park-item"><div class="park-name">TRINITY B3</div><div class="park-area">Itabashi</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">ムラサキ立川立飛</span><span data-lang="en">Murasaki Park Tachikawa</span></div><div class="park-area">Tachikawa</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
-      <div class="park-item"><div class="park-name"><span data-lang="ja">八潮北公園</span><span data-lang="en">Yashio Kita Park</span></div><div class="park-area">Shinagawa</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">八潮北公園</span><span data-lang="en">Yashio Kita Park</span></div><div class="park-area">Shinagawa</div><div class="park-tags"></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">小菅西公園</span><span data-lang="en">Kosuge Nishi Park</span></div><div class="park-area">Katsushika</div><div class="park-tags"><span class="park-tag tag-new">New '26</span></div></div>
 
       <div class="park-item"><div class="park-name"><span data-lang="ja">池袋スケートパーク</span><span data-lang="en">Ikebukuro Skatepark</span></div><div class="park-area">Toshima / Ikebukuro</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">祖師谷公園</span><span data-lang="en">Soshigaya Park</span></div><div class="park-area">Setagaya</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
-      <div class="park-item"><div class="park-name"><span data-lang="ja">堤通公園</span><span data-lang="en">Tsutsumidori Park</span></div><div class="park-area">Sumida / Hikifune</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">すみだスケートボードパーク</span><span data-lang="en">Sumida Skateboard Park</span></div><div class="park-area">Sumida / Mukojima</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">New</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">宮城ファミリー公園</span><span data-lang="en">Miyagi Family Park</span></div><div class="park-area">Adachi</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">大師河原公園</span><span data-lang="en">Daishigawara Park</span></div><div class="park-area">Kawasaki</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name">KAWASAKI KEIRIN PARK</div><div class="park-area">Kawasaki</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">Stone</span></div></div>
       <div class="park-item"><div class="park-name"><span data-lang="ja">新横浜公園スケボー広場</span><span data-lang="en">Shin-Yokohama Park</span></div><div class="park-area">Yokohama / H.L.N.A</div><div class="park-tags"><span class="park-tag tag-free">Free</span></div></div>
       <div class="park-item"><div class="park-name">8Times Corner Store</div><div class="park-area">Adachi / Nishi-Arai</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
       <div class="park-item"><div class="park-name">BASHI BURGER CHANCE</div><div class="park-area">Kawaguchi, Saitama</div><div class="park-tags"><span class="park-tag tag-indoor">Indoor</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">武蔵野公園</span><span data-lang="en">Musashino Park</span></div><div class="park-area">Fuchu</div><div class="park-tags"><span class="park-tag tag-free">Free</span><span class="park-tag tag-new">New</span></div></div>
+      <div class="park-item"><div class="park-name"><span data-lang="ja">鵠沼 HUG-RIDE PARK</span><span data-lang="en">Kugenuma HUG-RIDE PARK</span></div><div class="park-area">Fujisawa, Kanagawa</div><div class="park-tags"><span class="park-tag tag-new">New</span></div></div>
     </div>
   </div>
 </section>
@@ -726,8 +730,8 @@ S = min( 1 , t / T_dry )</div>
   <div class="footer-links">
     <a href="#features"><span data-lang="ja">機能</span><span data-lang="en">Features</span></a>
     <a href="#parks"><span data-lang="ja">パーク</span><span data-lang="en">Parks</span></a>
-    <a href="https://instagram.com/tokyoskateradar" target="_blank">Instagram</a>
-    <a href="https://x.com/SkateRadars" target="_blank">X</a>
+    <a href="https://www.instagram.com/tokyo_skate_radar/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><img src="/instagram.svg" alt="" width="20" height="20"></a>
+    <a href="https://x.com/SkateRadars" target="_blank" rel="noopener" class="social-link" aria-label="X"><img src="/x.svg" alt="" width="18" height="18"></a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="mailto:support@skateradar.app"><span data-lang="ja">サポート</span><span data-lang="en">Support</span></a>
   </div>
